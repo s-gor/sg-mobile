@@ -1,0 +1,137 @@
+name: Сообщение об ошибке
+description: Воспроизводимая проблема в SG Mobile
+title: "[Ошибка]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за отчёт. Перед отправкой удалите UUID, ключи, токены подписок, рабочие URL, пароли и личные адреса.
+
+        Не прикладывайте резервную копию или полную конфигурацию. Подробный порядок: SUPPORT.md и SECURITY.md.
+
+  - type: input
+    id: version
+    attributes:
+      label: Версия SG Mobile
+      description: Укажите build, versionName и versionCode из раздела «О приложении».
+      placeholder: "074P / 0.0.93-help-entry / 193"
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: Устройство
+      description: Модель телефона, версия Android и оболочка производителя.
+      placeholder: "OnePlus 12, Android 15, OxygenOS 15"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: network
+    attributes:
+      label: Сеть
+      options:
+        - Wi-Fi
+        - LTE
+        - 5G
+        - Переключение Wi-Fi и мобильной сети
+        - Другое
+    validations:
+      required: true
+
+  - type: input
+    id: protocol
+    attributes:
+      label: Протокол
+      description: Укажите отображаемое название протокола. Не публикуйте адрес сервера и секреты.
+      placeholder: "VLESS XHTTP REALITY / Hysteria2 / AWG 3.1"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: source
+    attributes:
+      label: Источник конфигурации
+      options:
+        - Отдельный профиль
+        - Подписка
+        - SG Subscription
+        - Импорт файла или QR
+        - Не относится
+    validations:
+      required: true
+
+  - type: dropdown
+    id: battery
+    attributes:
+      label: Экономия батареи
+      options:
+        - Без ограничений
+        - Ограничена
+        - Не проверено
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Шаги воспроизведения
+      description: Опишите последовательность действий так, чтобы её можно было повторить.
+      placeholder: |
+        1. Открыть приложение
+        2. Выбрать ...
+        3. Нажать ...
+        4. Получить ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Ожидаемый результат
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Фактический результат
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Частота
+      options:
+        - Возникает всегда
+        - Возникает периодически
+        - Произошло один раз
+    validations:
+      required: true
+
+  - type: textarea
+    id: log
+    attributes:
+      label: Очищенный фрагмент журнала
+      description: Оставьте короткий фрагмент вокруг ошибки. Замените секреты на REDACTED.
+      render: text
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Дополнительные сведения
+      description: Укажите MTU, Always-on VPN, Kill Switch, результат проверки другой ноды и другие важные условия.
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Подтверждение
+      options:
+        - label: Я проверил, что в сообщении и вложениях нет ключей, UUID, токенов, паролей и полных URL подписок.
+          required: true
+        - label: Я указал точную версию приложения и шаги воспроизведения.
+          required: true
