@@ -80,38 +80,21 @@ SG Mobile использует отдельный runtime для каждого 
 
 ## Интерфейс
 
-<table>
-<tr>
-<td align="center" width="50%">
-<b>Главный экран — отключено</b><br>
-<br><br><br><br>
-<sub>Место зарезервировано для 01-home-disconnected.png</sub>
-<br><br><br><br>
-</td>
-<td align="center" width="50%">
-<b>Главный экран — подключено</b><br>
-<br><br><br><br>
-<sub>Место зарезервировано для 02-home-connected.png</sub>
-<br><br><br><br>
-</td>
-</tr>
-<tr>
-<td align="center" width="50%">
-<b>Профили</b><br>
-<br><br><br><br>
-<sub>Место зарезервировано для 03-profiles.png</sub>
-<br><br><br><br>
-</td>
-<td align="center" width="50%">
-<b>Импорт профиля</b><br>
-<br><br><br><br>
-<sub>Место зарезервировано для 04-import-profile.png</sub>
-<br><br><br><br>
-</td>
-</tr>
-</table>
+<p align="center">
+  <img src="docs/screenshots/gallery-01-main.webp" alt="Главные экраны, импорт и статистика SG Mobile" width="760">
+</p>
 
-Остальные утверждённые экраны и правила подготовки снимков перечислены в [разделе скриншотов](docs/screenshots/README.md). На изображениях не должны присутствовать рабочие URL подписок, UUID, ключи, токены, внутренние адреса серверов и личные уведомления.
+<p align="center">
+  <img src="docs/screenshots/gallery-02-network.webp" alt="Маршрутизация, VPN для приложений и защита от утечек" width="760">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/gallery-03-tools.webp" alt="Настройки, резервная копия и диагностика" width="760">
+</p>
+
+Снимки профилей и подписок пока не публикуются: в исходных кадрах присутствуют рабочие адреса серверов и источников. Для них сохранено место до обезличенной пересъёмки с демонстрационными данными.
+
+Полный список экранов и правила подготовки снимков находятся в [разделе скриншотов](docs/screenshots/README.md).
 
 ## Проверка APK
 
