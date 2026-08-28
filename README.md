@@ -80,21 +80,9 @@ SG Mobile использует отдельный runtime для каждого 
 
 ## Интерфейс
 
-<p align="center">
-  <img src="docs/screenshots/gallery-01-main.webp" alt="Главные экраны, импорт и статистика SG Mobile" width="480">
-</p>
+Сжатые коллажи сняты с публикации: их разрешение было недостаточным и не соответствовало качеству исходных снимков.
 
-<p align="center">
-  <img src="docs/screenshots/gallery-02-network.webp" alt="Маршрутизация, VPN для приложений и защита от утечек" width="480">
-</p>
-
-<p align="center">
-  <img src="docs/screenshots/gallery-03-tools.webp" alt="Настройки, резервная копия и диагностика" width="480">
-</p>
-
-<p align="center">
-  <img src="docs/screenshots/gallery-04-subscriptions.webp" alt="Профили, подписки и ноды SG Mobile" width="360">
-</p>
+Галерея заменяется на исходные PNG в разрешении **1080 × 2340** без повторного уменьшения. На главной странице будут отображаться кликабельные превью; по нажатию откроется полный оригинал.
 
 Полный список экранов и правила подготовки снимков находятся в [разделе скриншотов](docs/screenshots/README.md).
 
