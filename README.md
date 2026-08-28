@@ -80,9 +80,33 @@ SG Mobile использует отдельный runtime для каждого 
 
 ## Интерфейс
 
-Сжатые коллажи сняты с публикации: их разрешение было недостаточным и не соответствовало качеству исходных снимков.
+Ниже используются исходные PNG **1080 × 2340** без перекодирования и уменьшения файлов. Нажмите на любой снимок, чтобы открыть полный оригинал.
 
-Галерея заменяется на исходные PNG в разрешении **1080 × 2340** без повторного уменьшения. На главной странице будут отображаться кликабельные превью; по нажатию откроется полный оригинал.
+<p align="center">
+  <a href="docs/screenshots/01-home-disconnected.png"><img src="docs/screenshots/01-home-disconnected.png" alt="Главный экран, VPN отключён" width="190"></a>
+  <a href="docs/screenshots/02-home-connected.png"><img src="docs/screenshots/02-home-connected.png" alt="Главный экран, VPN подключён" width="190"></a>
+  <a href="docs/screenshots/03-profiles.png"><img src="docs/screenshots/03-profiles.png" alt="Профили" width="190"></a>
+  <a href="docs/screenshots/04-import-profile.png"><img src="docs/screenshots/04-import-profile.png" alt="Импорт профиля" width="190"></a>
+</p>
+
+<p align="center">
+  <a href="docs/screenshots/05-subscriptions.png"><img src="docs/screenshots/05-subscriptions.png" alt="Подписки" width="190"></a>
+  <a href="docs/screenshots/06-subscription-nodes.png"><img src="docs/screenshots/06-subscription-nodes.png" alt="Ноды подписки" width="190"></a>
+  <a href="docs/screenshots/07-traffic-15min.png"><img src="docs/screenshots/07-traffic-15min.png" alt="Трафик за 15 минут" width="190"></a>
+  <a href="docs/screenshots/07-traffic-statistics.png"><img src="docs/screenshots/07-traffic-statistics.png" alt="Статистика трафика" width="190"></a>
+</p>
+
+<p align="center">
+  <a href="docs/screenshots/08-routing.png"><img src="docs/screenshots/08-routing.png" alt="Маршрутизация" width="190"></a>
+  <a href="docs/screenshots/09-per-app.png"><img src="docs/screenshots/09-per-app.png" alt="VPN для приложений" width="190"></a>
+  <a href="docs/screenshots/10-leak-protection.png"><img src="docs/screenshots/10-leak-protection.png" alt="Защита от утечек" width="190"></a>
+</p>
+
+<p align="center">
+  <a href="docs/screenshots/10-settings-battery-autorotate.png"><img src="docs/screenshots/10-settings-battery-autorotate.png" alt="Автоповорот и батарея" width="190"></a>
+  <a href="docs/screenshots/11-backup.png"><img src="docs/screenshots/11-backup.png" alt="Резервная копия" width="190"></a>
+  <a href="docs/screenshots/12-diagnostics.png"><img src="docs/screenshots/12-diagnostics.png" alt="Диагностика" width="190"></a>
+</p>
 
 Полный список экранов и правила подготовки снимков находятся в [разделе скриншотов](docs/screenshots/README.md).
 
