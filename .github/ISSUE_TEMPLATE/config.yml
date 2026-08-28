@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Русская справка
+    url: https://github.com/s-gor/sg-mobile/blob/main/HELP-RU.md
+    about: Ответы по установке, профилям, подпискам, маршрутизации, защите и диагностике.
+  - name: Частые вопросы
+    url: https://github.com/s-gor/sg-mobile/blob/main/FAQ.md
+    about: Проверьте типовые вопросы перед созданием нового Issue.
+  - name: Безопасная публикация данных
+    url: https://github.com/s-gor/sg-mobile/blob/main/SECURITY.md
+    about: Что нужно удалить из журналов, снимков, конфигураций и URL.
