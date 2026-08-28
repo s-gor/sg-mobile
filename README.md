@@ -81,15 +81,15 @@ SG Mobile использует отдельный runtime для каждого 
 ## Интерфейс
 
 <p align="center">
-  <img src="docs/screenshots/gallery-01-main.webp" alt="Главные экраны, импорт и статистика SG Mobile" width="760">
+  <img src="docs/screenshots/gallery-01-main.webp" alt="Главные экраны, импорт и статистика SG Mobile" width="480">
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/gallery-02-network.webp" alt="Маршрутизация, VPN для приложений и защита от утечек" width="760">
+  <img src="docs/screenshots/gallery-02-network.webp" alt="Маршрутизация, VPN для приложений и защита от утечек" width="480">
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/gallery-03-tools.webp" alt="Настройки, резервная копия и диагностика" width="760">
+  <img src="docs/screenshots/gallery-03-tools.webp" alt="Настройки, резервная копия и диагностика" width="480">
 </p>
 
 Снимки профилей и подписок пока не публикуются: в исходных кадрах присутствуют рабочие адреса серверов и источников. Для них сохранено место до обезличенной пересъёмки с демонстрационными данными.
