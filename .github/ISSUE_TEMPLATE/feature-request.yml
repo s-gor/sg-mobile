@@ -1,0 +1,76 @@
+name: Предложение функции
+description: Новая возможность или улучшение SG Mobile
+title: "[Предложение]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Опишите пользовательскую задачу, а не только желаемую кнопку. Не прикладывайте рабочие конфигурации, токены подписок и приватные адреса.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Какую проблему нужно решить?
+      description: Что сейчас неудобно, невозможно или требует лишних действий?
+    validations:
+      required: true
+
+  - type: textarea
+    id: current
+    attributes:
+      label: Как это делается сейчас?
+      description: Опишите текущий обходной путь или существующий сценарий.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Предлагаемое решение
+      description: Опишите минимальный результат, который решит задачу.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Раздел приложения
+      options:
+        - Главный экран
+        - Профили
+        - Подписки и ноды
+        - Подключение и стабильность
+        - Маршрутизация
+        - VPN для приложений
+        - Статус и мониторинг
+        - Защита от утечек
+        - Резервная копия
+        - Диагностика
+        - Справка
+        - Другое
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Альтернативы
+      description: Какие другие варианты вы рассматривали?
+
+  - type: textarea
+    id: ui
+    attributes:
+      label: Изменения интерфейса
+      description: Нужен ли новый экран, пункт меню или настройка? Можно приложить обезличенный эскиз.
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Подтверждение
+      options:
+        - label: Предложение не содержит ключей, токенов, рабочих URL и других приватных данных.
+          required: true
+        - label: Я описал задачу пользователя и минимальный ожидаемый результат.
+          required: true
