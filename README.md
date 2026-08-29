@@ -1,13 +1,13 @@
 <div align="center">
 
-# SG Mobile 074P
+# SG Mobile 075
 
 ### Универсальный VPN-клиент для Android
 
 **Один APK. Несколько сетевых движков. Профили, подписки, маршрутизация, мониторинг и защита от утечек — в одном интерфейсе.**
 
 <p>
-  <img alt="Release line" src="https://img.shields.io/badge/Release%20line-074P-2563EB?style=for-the-badge">
+  <img alt="Release line" src="https://img.shields.io/badge/Release%20line-075-2563EB?style=for-the-badge">
   <img alt="Status" src="https://img.shields.io/badge/Status-Testing-F59E0B?style=for-the-badge">
   <img alt="Android" src="https://img.shields.io/badge/Android-8.0%2B-3DDC84?style=for-the-badge&logo=android&logoColor=white">
   <img alt="ABI" src="https://img.shields.io/badge/ABI-arm64--v8a-5865F2?style=for-the-badge">
@@ -34,15 +34,15 @@
 
 ## Текущий статус
 
-> **SG Mobile 074P находится в тестовой линии.** Публичный APK считается выпущенным только после появления отдельного GitHub Release с APK и контрольной суммой SHA-256. До этого момента не используйте APK из комментариев, случайных зеркал или сторонних сообщений.
+> **SG Mobile 075 находится в тестовой линии.** Публичный APK считается выпущенным только после появления отдельного GitHub Release с APK и контрольной суммой SHA-256. До этого момента не используйте APK из комментариев, случайных зеркал или сторонних сообщений.
 
 | Параметр | Значение |
 |---|---|
-| Линия приложения | **074P** |
+| Линия приложения | **075** |
 | Android | **8.0 и новее** |
 | Архитектура | **arm64-v8a** |
-| versionCode | **193** |
-| versionName | `0.0.93-help-entry` |
+| versionCode | **194** |
+| versionName | `0.0.94-compact-ping` |
 | Интерфейс | Русский, светлая и тёмная темы |
 | Исходный код | В этом публичном репозитории не размещается |
 
@@ -298,7 +298,7 @@ SG Mobile использует сторонние сетевые движки и
 
 <div align="center">
 
-**SG Mobile 074P**
+**SG Mobile 075**
 
 Android · Xray · sing-box · Hysteria2 · Mieru · Mihomo · AmneziaWG
 
