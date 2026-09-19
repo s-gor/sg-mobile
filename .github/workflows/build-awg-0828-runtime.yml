@@ -1,0 +1,63 @@
+name: Build AWG 0828 Android runtime
+
+on:
+  push:
+    branches:
+      - build/079j-awg-0828-runtime
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout holder repo
+        uses: actions/checkout@v4
+
+      - name: Checkout official AmneziaWG Android base
+        run: |
+          git clone --recursive --branch v3.1.20260814 --depth 1 https://github.com/amnezia-vpn/amneziawg-android.git awg-android
+
+      - name: Pin native core 20260828 and verified September Android runtime fixes
+        shell: bash
+        run: |
+          set -euxo pipefail
+          cd awg-android
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path("tunnel/tools/libwg-go/go.mod")
+          s = p.read_text()
+          old = "github.com/amnezia-vpn/amneziawg-go/v3 v3.1.20260814"
+          new = "github.com/amnezia-vpn/amneziawg-go/v3 v3.1.20260828"
+          assert old in s
+          p.write_text(s.replace(old, new))
+          PY
+          curl -fsSL https://raw.githubusercontent.com/izhddm/amneziawg-android/3a40418a6df4ae80283016293af69f38a9b264f7/tunnel/tools/libwg-go/Makefile             -o tunnel/tools/libwg-go/Makefile
+          curl -fsSL https://raw.githubusercontent.com/izhddm/amneziawg-android/d242456c2f418fcb0faddbc8f94fb3634e97aee9/tunnel/tools/libwg-go/api-android.go             -o tunnel/tools/libwg-go/api-android.go
+
+      - name: Build release AAR
+        shell: bash
+        run: |
+          set -euxo pipefail
+          cd awg-android
+          chmod +x gradlew
+          ./gradlew :tunnel:assembleRelease --stacktrace --no-daemon
+
+      - name: Verify embedded native core
+        shell: bash
+        run: |
+          set -euxo pipefail
+          cd awg-android
+          AAR="$(find tunnel/build/outputs/aar -name '*release*.aar' | head -n1)"
+          test -n "$AAR"
+          mkdir -p ../artifact
+          cp "$AAR" ../artifact/amneziawg-android-v3.1.20260828-sg.aar
+          unzip -q "$AAR" 'jni/*/libwg-go.so' -d ../artifact/native
+          find ../artifact -type f -maxdepth 5 -print
+          sha256sum ../artifact/amneziawg-android-v3.1.20260828-sg.aar > ../artifact/SHA256SUMS.txt
+          find ../artifact/native -name libwg-go.so -exec sha256sum {} \; >> ../artifact/SHA256SUMS.txt
+
+      - name: Upload runtime artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: awg-android-3.1.20260828-sg
+          path: artifact/
+          if-no-files-found: error
