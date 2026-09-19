@@ -12,6 +12,11 @@ jobs:
       - name: Checkout holder repo
         uses: actions/checkout@v4
 
+      - name: Setup Go for module refresh
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.25.14'
+
       - name: Checkout official AmneziaWG Android base
         run: |
           git clone --recursive --branch v3.1.20260814 --depth 1 https://github.com/amnezia-vpn/amneziawg-android.git awg-android
@@ -32,6 +37,12 @@ jobs:
           PY
           curl -fsSL https://raw.githubusercontent.com/izhddm/amneziawg-android/3a40418a6df4ae80283016293af69f38a9b264f7/tunnel/tools/libwg-go/Makefile             -o tunnel/tools/libwg-go/Makefile
           curl -fsSL https://raw.githubusercontent.com/izhddm/amneziawg-android/d242456c2f418fcb0faddbc8f94fb3634e97aee9/tunnel/tools/libwg-go/api-android.go             -o tunnel/tools/libwg-go/api-android.go
+          (
+            cd tunnel/tools/libwg-go
+            go mod tidy
+            grep -F 'github.com/amnezia-vpn/amneziawg-go/v3 v3.1.20260828' go.mod
+            grep -F 'github.com/amnezia-vpn/amneziawg-go/v3 v3.1.20260828 ' go.sum
+          )
 
       - name: Build release AAR
         shell: bash
@@ -51,7 +62,7 @@ jobs:
           mkdir -p ../artifact
           cp "$AAR" ../artifact/amneziawg-android-v3.1.20260828-sg.aar
           unzip -q "$AAR" 'jni/*/libwg-go.so' -d ../artifact/native
-          find ../artifact -type f -maxdepth 5 -print
+          find ../artifact -maxdepth 5 -type f -print
           sha256sum ../artifact/amneziawg-android-v3.1.20260828-sg.aar > ../artifact/SHA256SUMS.txt
           find ../artifact/native -name libwg-go.so -exec sha256sum {} \; >> ../artifact/SHA256SUMS.txt
 
