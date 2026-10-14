@@ -50,7 +50,8 @@ object SgNetUriParser {
         require(deviceId.length <= 256 && secret.length <= 2048) { "Invalid credential length" }
         val sni = params["sni"]?.takeIf { it.isNotBlank() } ?: host
         require(sni.length <= 253 && !sni.any { it.isWhitespace() || it == '/' })
-        val version = params["v"]?.toIntOrNull() ?: 1
+        val version = if (params.containsKey("v")) params["v"]?.toIntOrNull()
+            ?: throw IllegalArgumentException("Invalid SG-Net profile version") else 1
         require(version == 1) { "Unsupported SG-Net profile version" }
         val name = decode(uri.rawFragment ?: "").take(128).ifBlank { "SG-Net" }
         return SgNetProfile(host, port, deviceId, secret, sni, version, name)
